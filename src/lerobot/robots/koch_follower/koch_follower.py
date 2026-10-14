@@ -118,7 +118,7 @@ class KochFollower(Robot):
         )
         self.bus.write_calibration(self.calibration)
         self._save_calibration()
-        print("Calibration saved to", self.calibration_fpath)
+        logger.info(f"Calibration saved to {self.calibration_fpath}")
 
     def configure(self) -> None:
         with self.bus.torque_disabled():
